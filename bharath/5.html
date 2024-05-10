@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS for additional styling -->
+    <style>
+        /* Custom CSS for additional styling */
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+        </style>
+</head>
+<body>
+    <script>
+        // Function to validate the Settings and Preferences form
+function validateSettingsForm() {
+    var notificationPreference = document.getElementById("notification-preference").value;
+    var languagePreference = document.getElementById("language-preference").value;
+
+    // Check if notification preference and language preference are selected
+    if (notificationPreference === "" || languagePreference === "") {
+        alert("Please select notification and language preferences.");
+        return false; // Prevent form submission
+    }
+
+    // If all inputs are valid, allow form submission
+    return true;
+}
+
+// Add event listener to the form submit button
+document.getElementById("save-settings-btn").addEventListener("click", function(event) {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Validate form before submission
+    if (validateSettingsForm()) {
+        // If form is valid, submit changes
+        alert("Settings saved successfully!");
+        // Additional code to submit form data to the server can be added here
+    }
+});
+
+        </script>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Welcome to Your Online Banking System</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Transaction History</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-05-01</td>
+                            <td>ATM Withdrawal</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <!-- Add more transaction records here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Alerts and Notifications</h2>
+                <div class="alert alert-primary" role="alert">
+                    Your account balance is low. Please consider depositing funds.
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    Your recent transfer of $500 to account XXXX1234 was successful.
+                </div>
+                <!-- Add more alerts and notifications as needed -->
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Settings and Preferences</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="notification-preference">Notification Preference:</label>
+                    <select class="form-control" id="notification-preference">
+                        <option value="email">Email</option>
+                        <option value="sms">SMS</option>
+                        <option value="both">Both</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="language-preference">Language Preference:</label>
+                    <select class="form-control" id="language-preference">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <!-- Add more language options as needed -->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+
+        <hr>
+
+        <h2>Customer Support</h2>
+        <p>If you need assistance, please contact our customer support team:</p>
+        <ul>
+            <li>Email: support@onlinebanking.com</li>
+            <li>Phone: 1-800-123-4567</li>
+            <!-- Add more contact options as needed -->
+        </ul>
+
+        <hr>
+
+        <h2>Security</h2>
+        <p>Your security is important to us. We implement the following measures to protect your information:</p>
+        <ul>
+            <li>Encryption of data during transmission</li>
+            <li>Regular security audits and monitoring</li>
+            <li>Multi-factor authentication for login</li>
+            <!-- Add more security measures as needed -->
+        </ul>
+        <a href="6.html" class="cta-btn">NEXT</a>
+    </div>
+
+    
+</body>
+</html>

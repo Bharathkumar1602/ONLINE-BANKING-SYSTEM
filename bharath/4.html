@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment - Online Banking System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS for additional styling -->
+    <style>
+        /* Custom CSS for additional styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-4 mb-4">Bill Payment</h2>
+        <form>
+            <div class="form-group">
+                <label for="payee">Payee:</label>
+                <input type="text" class="form-control" id="payee" placeholder="Enter payee's name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" class="form-control" id="amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="account">From Account:</label>
+                <select class="form-control" id="account" required>
+                    <option value="">Select Account</option>
+                    <option value="checking">Checking Account - $1,500.00</option>
+                    <option value="savings">Savings Account - $5,000.00</option>
+                    <!-- Add more account options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Payment Date:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <a href="5.html" class="cta-btn">Next</a>
+        </form>
+    </div>
+</body>
+</html>
